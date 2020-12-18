@@ -114,7 +114,7 @@ function viewEmployeeByDepartment() {
 	ON e.role_id = r.id
   LEFT JOIN department d
   ON d.id = r.department_id
-  GROUP BY d.id, d.name`;
+  GROUP BY d.id, d.name, r.salary`;
 
   connection.query(query, function (err, res) {
     if (err) throw err;
