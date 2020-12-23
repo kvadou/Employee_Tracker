@@ -1,6 +1,7 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 require("console.table");
+// require ascii-art
 // const sql = require("./sql");
 
 var connection = mysql.createConnection({
