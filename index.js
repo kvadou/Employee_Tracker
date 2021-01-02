@@ -9,14 +9,8 @@ let employees;
 
 var connection = mysql.createConnection({
   host: "localhost",
-
-  // port 3306
   port: 3306,
-
-  // username
   user: "root",
-
-  // password & database
   password: "Wilder3114!",
   database: "employees_db",
 });
@@ -67,7 +61,6 @@ getRoles = () => {
   connection.query("SELECT id, title FROM role", (err, res) => {
     if (err) throw err;
     roles = res;
-    // console.table(roles);
   });
 };
 
@@ -75,7 +68,6 @@ getDepartments = () => {
   connection.query("SELECT id, name FROM department", (err, res) => {
     if (err) throw err;
     departments = res;
-    // console.log(departments);
   });
 };
 
@@ -85,7 +77,6 @@ getManagers = () => {
     (err, res) => {
       if (err) throw err;
       managers = res;
-      // console.table(managers);
     }
   );
 };
@@ -96,7 +87,6 @@ getEmployees = () => {
     (err, res) => {
       if (err) throw err;
       employees = res;
-      // console.table(employees);
     }
   );
 };
